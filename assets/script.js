@@ -2,7 +2,9 @@ const slides = [
 	{
 		"image":"slide1.jpg",
 		"tagLine":"Impressions tous formats <span>en boutique et en ligne</span>"
+	
 	},
+	
 	{
 		"image":"slide2.jpg",
 		"tagLine":"Tirages haute définition grand format <span>pour vos bureaux et events</span>"
@@ -16,3 +18,23 @@ const slides = [
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
 	}
 ]
+
+let arrow_left = document.querySelector(".arrow_left");
+arrow_left.addEventListener("click", () => {
+	console.log (arrow_left)
+	let img id=document.getElementById("Banner Print-it")
+
+	img.setAttribute("./assets/images/slideshow/slide1.jpg","./assets/images/slideshow/slide2.jpg")
+});
+
+
+
+
+
+
+let arrow_right = document.querySelector(".arrow_right");
+arrow_right.addEventListener("click", () => {
+	console.log (arrow_right)
+
+});
+
