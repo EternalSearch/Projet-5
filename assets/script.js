@@ -18,7 +18,7 @@ const slides = [
 ]
 const nbSlides = slides.length; 
 let dotsDiv = document.querySelector(".dots"); 
-for (i = 0; i < nbSlides; i++) { // Boucle qui créé les 4 dots du carrousel
+for (i = 0; i < nbSlides; i++) {
     if (i == 0) {
         dotsDiv.innerHTML = "<div class='dot dot_selected'></div>";
     } else {
@@ -47,8 +47,8 @@ function slideChangePlus() {
         bannerText.innerHTML = slides[dotNumber].tagLine;
     }
 }
-function slideChangeMinus() { // Fonction qui passe au slide précédent
-    if (dotNumber > 0) { // Si dotNumber > 0 alors on passe au slide précédent
+function slideChangeMinus() {
+    if (dotNumber > 0) {
         dotNumber--;
         document.querySelector(".dot_selected").classList.remove("dot_selected");
         document.querySelectorAll(".dot")[dotNumber].classList.add("dot_selected");
@@ -65,5 +65,4 @@ function slideChangeMinus() { // Fonction qui passe au slide précédent
 let leftArrow = document.querySelector(".arrow_left"); 
 let rightArrow = document.querySelector(".arrow_right"); 
 rightArrow.addEventListener("click", slideChangePlus); 
-leftArrow.addEventListener("click", slideChangeMinus); 
-console.log(slides.length)
+leftArrow.addEventListener("click", slideChangeMinus);
